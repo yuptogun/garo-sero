@@ -1,0 +1,42 @@
+.ro, .uro, .wrapper {
+	display: table;
+}
+
+.garo, .horizontal {
+	width: 100%;
+	display: table-row;
+}
+.sero, .vertical {
+	display: table-cell;
+	vertical-align: middle;
+}
+.sero.ro, .vertical.wrapper {
+	display: table;
+}
+.qut, .last {
+	height: 100%;
+}
+
+.kan, .cell {
+	display: table-cell;
+	width: 100%;
+}
+.kan, .cell, .kan *, .cell * {
+	text-align: center;
+}
+.qut.kan, .last.cell {
+	height: 100%;
+}
+
+.oen, .oen *, .lefted, .lefted * {
+	text-align: left;
+}
+.orn, .orn *, .righted, .right * {
+	text-align: right;
+}
+.oui, .topped {
+	vertical-align: top;
+}
+.ale, .bottomed {
+	vertical-align: bottom;
+}

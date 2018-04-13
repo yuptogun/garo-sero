@@ -2,18 +2,22 @@
 <html>
 <head>
 	<title>.garo.sero</title>
-	<link rel="stylesheet" type="text/css" href="garosero.css">
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./garosero.css">
 	<style type="text/css">
 		body {
 			width: 100%;
 			max-width: 640px;
 			margin: 0 auto;
-			background: #fafafa;
+			background: #fff;
+			font-family: 'Gothic A1', sans-serif;
+		}
+		code {
+			font-family: 'Consolas', monospace;
 		}
 		.example {
 			margin: 1em 0;
 			border: 1px solid #444;
-			font-family: 'Consolas', monospace;
 			height: 300px;
 		}
 		.example:nth-of-type(10n+1) {
@@ -55,25 +59,25 @@
 <body>
 	<div id="garosero">
 		<h1>.garo.sero</h1>
-		<p>= simple table layout helper CSS</p>
-		<p>If you speak Korean it is really easy to get how it works. Otherwise, please learn English and refer to the corresponding classnames.</p>
-		<p><em>One thing to mention: don't mix two languages.</em> I mean, something like .garo.wrapper won't work.</p>
+		<small>simple table layout helper CSS</small>
+		<p>If you speak Korean it is really easy to get how it works. Otherwise, please refer to the corresponding English classnames.</p>
 		<ul>
-			<li>.ro(.uro) = .wrapper : ~(으)로 ("-ly")</li>
-			<li>.garo = .horizontal : 가로 (usually known as rows)</li>
-			<li>.sero = .vertical : 세로 (usually known as cells)</li>
-			<li>.chum = .first : 처음 (either row or cell)</li>
-			<li>.qut = .last : 끝 (either row or cell)</li>
-			<li>.kan = .cell : 칸 (centeted and middled by default)</li>
-			<li>.oen = .lefted : 왼</li>
-			<li>.orn = .righted : 오른</li>
-			<li>.oui = .topped : 위</li>
-			<li>.ale = .bottomed : 아래</li>
+			<li><code>.ro(.uro)</code> = <code>.wrapper</code> : ~(으)로 ("-ly")</li>
+			<li><code>.garo</code> = <code>.horizontal</code> : 가로 (usually known as rows)</li>
+			<li><code>.sero</code> = <code>.vertical</code> : 세로 (usually known as cells)</li>
+			<li><code>.chum</code> = <code>.first</code> : 처음 (either row or cell)</li>
+			<li><code>.qut</code> = <code>.last</code> : 끝 (either row or cell)</li>
+			<li><code>.kan</code> = <code>.cell</code> : 칸 (centeted and middled by default)</li>
+			<li><code>.oen</code> = <code>.lefted</code> : 왼</li>
+			<li><code>.orn</code> = <code>.righted</code> : 오른</li>
+			<li><code>.oui</code> = <code>.topped</code> : 위</li>
+			<li><code>.ale</code> = <code>.bottomed</code> : 아래</li>
 		</ul>
+		<p><em>One thing to mention: don't mix two languages.</em> I mean, something like .garo.wrapper won't work.</p>
 		<div id="example1" class="garo sero ro example">
 			<div class="sero kan">
 				<p>
-					.garo.sero.ro. > .sero.kan<br>
+					<code>.garo.sero.ro. > .sero.kan</code><br>
 					가로 세로로 > 세로칸<br>
 					→ horizontally &amp; vertically wraps one vertical section
 				</p>
@@ -82,7 +86,7 @@
 		<div id="example2" class="garo sero ro example">
 			<div class="sero oen kan">
 				<p>
-					.garo.sero.ro. > .sero.oen.kan<br>
+					<code>.garo.sero.ro. > .sero.oen.kan</code><br>
 					가로 세로로 > 세로 왼칸<br>
 					→ horizontally &amp; vertically wraps one vertical section that aligns everything left
 				</p>
@@ -91,7 +95,7 @@
 		<div id="example3" class="garo sero ro example">
 			<div class="sero orn ale kan">
 				<p>
-					.garo.sero.ro. > .sero.orn.ale.kan<br>
+					<code>.garo.sero.ro. > .sero.orn.ale.kan</code><br>
 					가로 세로로 > 세로 오른아래 칸<br>
 					→ horizontally &amp; vertically wraps one vertical section that aligns everything bottom right
 				</p>
@@ -100,14 +104,14 @@
 		<div id="example4" class="garo sero ro example">
 			<div class="garo ro">
 				<p>
-					.garo.sero.ro. > .garo.ro<br>
+					<code>.garo.sero.ro. > .garo.ro</code><br>
 					가로 세로로 > 가로로<br>
 					→ this row uses minimum required height
 				</p>
 			</div>
 			<div class="garo qut uro">
 				<p>
-					.garo.sero.ro. > .garo.qut.uro<br>
+					<code>.garo.sero.ro. > .garo.qut.uro</code><br>
 					가로 세로로 > 가로 끝으로<br>
 					→ this row extends to the horizontal &amp; vertical end of the wrapper<br>
 					(you need to add .kan inside to make it centered)<br>
