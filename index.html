@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.garo.sero</title>
+	<link rel="stylesheet" type="text/css" href="garosero.css">
+	<style type="text/css">
+		body {
+			width: 100%;
+			max-width: 640px;
+			margin: 0 auto;
+			background: #fafafa;
+		}
+		.example {
+			margin: 1em 0;
+			border: 1px solid #444;
+			font-family: 'Consolas', monospace;
+			height: 300px;
+		}
+		.example:nth-of-type(10n+1) {
+			background: #dfdfdd;
+		}
+		.example:nth-of-type(10n+2) {
+			background: #bc6f25;
+		}
+		.example:nth-of-type(10n+3) {
+			background: #6789ca;
+		}
+		.example:nth-of-type(10n+4) {
+			background: #455f54;
+		}
+		.example:nth-of-type(10n+5) {
+			background: #594743;
+		}
+		.example:nth-of-type(10n+6) {
+			background: #e5b560;
+		}
+		.example:nth-of-type(10n+7) {
+			background: #504e49;
+		}
+		.example:nth-of-type(10n+8) {
+			background: #d8ccad;
+		}
+		.example:nth-of-type(10n+9) {
+			background: #a4a199;
+		}
+		.example:nth-of-type(10n+0) {
+			background: #941e34;
+		}
+
+		#garosero {
+			padding: 0 1em;
+		}
+	</style>
+</head>
+<body>
+	<div id="garosero">
+		<h1>.garo.sero</h1>
+		<p>= simple table layout helper CSS</p>
+		<p>If you speak Korean it is really easy to get how it works. Otherwise, please learn English and refer to the corresponding classnames.</p>
+		<p><em>One thing to mention: don't mix two languages.</em> I mean, something like .garo.wrapper won't work.</p>
+		<ul>
+			<li>.ro(.uro) = .wrapper : ~(으)로 ("-ly")</li>
+			<li>.garo = .horizontal : 가로 (usually known as rows)</li>
+			<li>.sero = .vertical : 세로 (usually known as cells)</li>
+			<li>.chum = .first : 처음 (either row or cell)</li>
+			<li>.qut = .last : 끝 (either row or cell)</li>
+			<li>.kan = .cell : 칸 (centeted and middled by default)</li>
+			<li>.oen = .lefted : 왼</li>
+			<li>.orn = .righted : 오른</li>
+			<li>.oui = .topped : 위</li>
+			<li>.ale = .bottomed : 아래</li>
+		</ul>
+		<div id="example1" class="garo sero ro example">
+			<div class="sero kan">
+				<p>
+					.garo.sero.ro. > .sero.kan<br>
+					가로 세로로 > 세로칸<br>
+					→ horizontally &amp; vertically wraps one vertical section
+				</p>
+			</div>
+		</div>
+		<div id="example2" class="garo sero ro example">
+			<div class="sero oen kan">
+				<p>
+					.garo.sero.ro. > .sero.oen.kan<br>
+					가로 세로로 > 세로 왼칸<br>
+					→ horizontally &amp; vertically wraps one vertical section that aligns everything left
+				</p>
+			</div>
+		</div>
+		<div id="example3" class="garo sero ro example">
+			<div class="sero orn ale kan">
+				<p>
+					.garo.sero.ro. > .sero.orn.ale.kan<br>
+					가로 세로로 > 세로 오른아래 칸<br>
+					→ horizontally &amp; vertically wraps one vertical section that aligns everything bottom right
+				</p>
+			</div>
+		</div>
+		<div id="example4" class="garo sero ro example">
+			<div class="garo ro">
+				<p>
+					.garo.sero.ro. > .garo.ro<br>
+					가로 세로로 > 가로로<br>
+					→ this row uses minimum required height
+				</p>
+			</div>
+			<div class="garo qut uro">
+				<p>
+					.garo.sero.ro. > .garo.qut.uro<br>
+					가로 세로로 > 가로 끝으로<br>
+					→ this row extends to the horizontal &amp; vertical end of the wrapper<br>
+					(you need to add .kan inside to make it centered)<br>
+					(it is identical with .garo.sero.ro > qut.garo.ro = 가로 세로로 > 끝 가로로)
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
